@@ -1,9 +1,9 @@
 # rkirby.co.uk
-
+[![Build Status](https://travis-ci.com/robwkirby/rkirby.co.uk.svg?branch=master)](https://travis-ci.com/robwkirby/rkirby.co.uk)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)](https://forthebadge.com)
 
-> Nuxt.js project
+My personal site, made with [Nuxt.js](https://nuxtjs.org/).
 
 ## Build Setup
 
