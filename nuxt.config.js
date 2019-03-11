@@ -42,12 +42,15 @@ module.exports = {
     { src: '~/plugins/Vuelidate' }
   ],
   modules: [
+    '@nuxtjs/google-analytics',
     ['nuxt-sass-resources-loader', [
       '~/assets/scss/_resources.scss',
     ]],
-    
   ],
   css: [
     '~/assets/scss/main.scss'
-  ]
+  ],
+  googleAnalytics: {
+    id: 'UA-64313676-1'
+  }
 }
