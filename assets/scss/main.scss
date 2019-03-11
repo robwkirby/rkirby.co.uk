@@ -1,0 +1,28 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 968px,
+  xl: 1400px,
+  xxl: 1600px
+);
+
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+
+@import "fonts/fonts";
+
+@import "base/buttons";
+@import "base/typography";
+

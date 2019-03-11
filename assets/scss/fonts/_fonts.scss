@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-medium.eot");
+  src: url("/fonts/gilroy-medium.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/gilroy-medium.woff2") format("woff2"),
+  url("/fonts/gilroy-medium.woff") format("woff"),
+  url("/fonts/gilroy-medium.ttf") format("ttf"),
+  url("/fonts/gilroy-medium") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-semibold.eot");
+  src: url("/fonts/gilroy-semibold.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/gilroy-semibold.woff2") format("woff2"),
+  url("/fonts/gilroy-semibold.woff") format("woff"),
+  url("/fonts/gilroy-semibold.ttf") format("ttf"),
+  url("/fonts/gilroy-semibold.svg#Gilroy-SemiBold") format("svg");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-extrabold.eot");
+  src: url("/fonts/gilroy-extrabold.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/gilroy-extrabold.woff2") format("woff2"),
+  url("/fonts/gilroy-extrabold.woff") format("woff"),
+  url("/fonts/gilroy-extrabold.ttf") format("ttf"),
+  url("/fonts/gilroy-extrabold.svg#Gilroy-ExtraBold") format("svg");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Regular'), local('Lato-Regular'),
+  url('/fonts/lato-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/fonts/lato-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-style: normal;
+  font-weight: 400;
+}

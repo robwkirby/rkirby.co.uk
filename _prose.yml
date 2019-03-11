@@ -1,0 +1,22 @@
+prose:
+  rooturl: 'content'
+  siteurl: 'https://www.rkirby.co.uk/'
+  media: 'static/images'
+  ignore:
+    - index.html
+    - meetups.html
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    content/work:
+      - name: "link"
+        field:
+          element: "text"
+          label: "Sections title"
+          placeholder: "This is a title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: "CURRENT_DATETIME"
