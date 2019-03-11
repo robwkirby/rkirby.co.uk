@@ -4,8 +4,10 @@
 </p>
 <p align="center">
   <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/made-with-vue.svg"></a>
-  <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/no-ragrets.svg"></a>
+  <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/winter-is-coming.svg"></a>
  </p>
+
+ 
 
 My personal site, made with [Nuxt.js](https://nuxtjs.org/).
 
