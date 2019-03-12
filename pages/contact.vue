@@ -24,9 +24,9 @@
             </li>
             <li class="contact__link">
               <span>Elsewhere</span>
-              <a href="#">Linkedin</a>
-              <a href="#">Github</a>
-              <a href="#">Codepen</a>
+              <a href="https://www.linkedin.com/in/robwkirby/">Linkedin</a>
+              <a href="https://github.com/robwkirby">Github</a>
+              <a href="https://codepen.io/RobKirby">Codepen</a>
             </li>
           </ul>
         </div>
