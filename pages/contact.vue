@@ -20,7 +20,7 @@
           <ul class="contact__links">
             <li class="contact__link contact__link--email">
               <span>Email</span>
-              <a href="#">hello@rkirby.co.uk</a>
+              <a href="mailto:hello@rkirby.co.uk">hello@rkirby.co.uk</a>
             </li>
             <li class="contact__link">
               <span>Elsewhere</span>
