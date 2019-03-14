@@ -29,6 +29,9 @@ module.exports = {
     linkActiveClass: 'active-link',
     linkExactActiveClass: 'exact-active-link'
   },
+  generate: {
+    fallback: "404.html"
+  },
   build: {
     analyze: true,
     extend (config, { isDev, isClient }) {
