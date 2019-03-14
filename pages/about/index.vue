@@ -28,14 +28,6 @@ export default {
   },
   components: {
     CV
-  },
-  async asyncData ({ app, route }) {
-    console.log(route);
   }
 }
 </script>
-
-
-<style lang="scss">
-
-</style>

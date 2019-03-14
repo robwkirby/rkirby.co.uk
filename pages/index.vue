@@ -83,12 +83,7 @@ export default {
         translateX: "-100%",
       })
     }
-  },
-  methods: {
-      runThis () {
-        console.log("tester");
-      }
-  },
+  }
 }
 </script>
 <style lang="scss">
