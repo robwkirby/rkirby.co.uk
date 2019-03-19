@@ -109,8 +109,8 @@ export default {
   &__title {
     font-family: "Gilroy";
     font-weight: 800;
-    font-size: 78px;
-    margin: 0;
+    font-size: 62px;
+    margin: 60px 0 0;
   }
   &__text {
     font-size: 24px;
@@ -140,6 +140,7 @@ export default {
 @media (min-width: 1600px) {
   .intro {
     &__title {
+      margin-top: 30px;
       font-size: 98px;
     }
     &__text {

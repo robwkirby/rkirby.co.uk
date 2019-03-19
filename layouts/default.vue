@@ -132,9 +132,16 @@ export default {
     width: 100%;
     z-index: 1;
     &__title {
-      padding-top: 120px;
+      padding-top: 20px;
     }
-    
+  }
+
+  @media (min-width: 1024px) {
+     .site-page {
+        &__title {
+          padding-top: 120px;
+        }
+      }
   }
 
 </style>

@@ -146,6 +146,7 @@ export default {
             }
         }
         &__nav-trigger {
+            padding: 8px 20px;
             position: relative;
             z-index: 99;
             cursor: pointer;
