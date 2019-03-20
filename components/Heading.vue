@@ -1,63 +1,45 @@
 <template>
-    <div class="slidey">
-        <span class="mask" ref="mask"></span>
-        <h1 class="words" ref="words">{{text}}</h1>
-    </div>
+    <h1 class="heading" ref="words">
+        <slot></slot>
+    </h1>
 </template>
 
 <script>
+import anime from 'animejs';
 export default {
-    props: {
-        text: {
-            type: String
-        }
-    },
-    mounted() {
-
-        var tl = new TimelineLite();
-
-        tl.set(this.$refs.words, {
-            alpha: "0",
-        });
-
-        tl.set(this.$refs.mask, {
-            x: "-100%",
-        });
-
-        tl.to(this.$refs.mask, 1, {
-            x: "100%",
-            ease: Expo.easeIn
-        });
-
-        tl.to(this.$refs.words, 0.5, {
-            alpha: "1",
-            ease: 0.7
-        }, "-=0.1");
-
-    }
+    // mounted() {
+    //     anime.set('.heading', {
+    //         backgroundPosition: '0px'
+    //     });
+    //     anime({
+    //         targets: '.heading',
+    //         backgroundPosition: '800px', // -> '250px'
+    //         easing: 'easeOutExpo',
+    //         delay: 2000,
+    //         duration: 2000,
+    //     });
+    // }
 }
 </script>
 
 <style lang="scss">
-    .slidey {
-        position: relative;
-        overflow: hidden;
-        margin: 60px 0px;
+    .heading {
+        font-family: "Gilroy";
+        font-weight: 800;
+        font-size: 62px;
+        line-height: 1;
 
-
-        .words {
-            margin: 0;
-        }
-        
-        .mask {
-            position: absolute;
-            background: $primary;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform-origin: 0 0;
-            z-index: 99
+        // color: transparent;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // background-image: linear-gradient(60deg, rgba(201,43,30,1) 75%, rgba(153,20,20,1) 75%);
+        // background-size: 100% 50px;
+        // background-repeat: repeat;
+        // background-position: 0% 0%;
+    }
+    @media (min-width: 1600px) {
+        .heading {
+            font-size: 98px;
         }
     }
 </style>

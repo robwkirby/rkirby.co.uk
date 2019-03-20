@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12">
           <header class="contact-form__header">
-            <h1 class="site-page__title">Get in touch</h1>
+             <Heading class="site-page__title">Get in touch</Heading>
           </header>
         </div>
       </div>
@@ -39,11 +39,12 @@
 
 <script>
 import anime from 'animejs';
-
+import Heading from '~/components/Heading.vue';
 import ContactForm from '~/components/forms/contact.vue';
 
 export default {
   components: {
+    Heading,
     ContactForm,
   },
   transition: {

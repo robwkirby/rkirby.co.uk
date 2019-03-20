@@ -3,7 +3,7 @@
     <div class="intro">
       <div class="row align-items-center">
         <div class="intro__col">
-          <h1 class="intro__title">Rob Kirby</h1>
+          <Heading class="intro__title">Rob Kirby</Heading>
           <p class="intro__text">
             Hi, I'm a Front End Developer with six years commercial experience. I'm based in Lancaster, England, and currently work at <a href="https://www.soapmedia.co.uk/">Soap Media</a>.
           </p>
@@ -27,6 +27,7 @@
 <script>
 import SocialLinks from '~/components/SocialLinks.vue';
 import Terminal from '~/components/Terminal.vue';
+import Heading from '~/components/Heading.vue';
 import anime from 'animejs';
 
 export default {
@@ -39,6 +40,7 @@ export default {
   components: {
     SocialLinks,
     Terminal,
+    Heading
   },
   transition: {
     mode: 'out-in',
@@ -107,9 +109,6 @@ export default {
     }
   }
   &__title {
-    font-family: "Gilroy";
-    font-weight: 800;
-    font-size: 62px;
     margin: 60px 0 0;
   }
   &__text {
@@ -141,7 +140,6 @@ export default {
   .intro {
     &__title {
       margin-top: 30px;
-      font-size: 98px;
     }
     &__text {
       font-size: 32px;

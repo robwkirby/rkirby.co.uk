@@ -34,7 +34,6 @@ module.exports = {
     fallback: "404.html"
   },
   build: {
-    analyze: true,
     extend (config, { isDev, isClient }) {
       config.module.rules.push({
           test: /\.md$/,

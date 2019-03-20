@@ -2,9 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="site-page__title">
-            Work
-          </h1>
+          <Heading class="site-page__title">Work</Heading>
         </div>
       </div>
       <WorkList :posts="posts" :workTransition="workTransition">
@@ -19,6 +17,7 @@
 </template>
 
 <script>
+import Heading from '~/components/Heading.vue';
 import WorkList from '@/components/work/WorkList';
 import { TimelineMax, TweenMax, Back } from 'gsap';
 
@@ -38,6 +37,7 @@ export default {
 
   },
   components: {
+    Heading,
     WorkList,
   },
   transition: {
