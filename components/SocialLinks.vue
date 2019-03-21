@@ -33,20 +33,20 @@ export default {
     }
   },
   mounted() {
+    this.$nextTick(() => {
+      anime.set('.social-list__item', {
+        translateY: 150,
+        opacity: 0,
+      });
 
-    anime.set('.social-list__item', {
-      translateY: 150,
-      opacity: 0,
+      anime({
+        targets: '.social-list__item',
+        opacity: 1,
+        translateY: 0,
+        delay: anime.stagger(-200, {start: 1000, easing: 'easeOut'}),
+        duration: 1500,
+      });
     });
-
-    anime({
-      targets: '.social-list__item',
-      opacity: 1,
-      translateY: 0,
-      delay: anime.stagger(-200, {start: 1000, easing: 'easeOut'}),
-      duration: 1500,
-    });
-
   }
 }
 </script>

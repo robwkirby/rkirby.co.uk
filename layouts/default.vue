@@ -13,8 +13,9 @@
 </template>
 
 <script>
-import VanillaTilt from 'vanilla-tilt';
+import anime from 'animejs';
 
+import VanillaTilt from 'vanilla-tilt';
 import SiteHeader from '~/components/SiteHeader.vue';
 import SocialLinks from '~/components/SocialLinks.vue';
 
@@ -30,7 +31,7 @@ export default {
       // this.$store.commit('toggleColourScheme')
       this.$store.commit('setFromRoute', from)
       this.$store.commit('setToRoute', to)
-    }
+    },
   },
   computed: {
     containerClass: function () {

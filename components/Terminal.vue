@@ -51,13 +51,13 @@ export default {
             this.container = new PIXI.Container();
             this.app.stage.addChild(this.container);
 
-            let frame = new PIXI.Graphics();
+            // let frame = new PIXI.Graphics();
 
-            frame.lineStyle(0, 0x0000FF, 1);
-            frame.beginFill(0xCCCCCC, 1);
-            frame.drawRect(0, 0, 827, 28);
+            // frame.lineStyle(0, 0x0000FF, 1);
+            // frame.beginFill(0xCCCCCC, 1);
+            // frame.drawRect(0, 0, 827, 28);
 
-            this.app.stage.addChild(frame);
+            // this.app.stage.addChild(frame);
 
             this.loader.load(() => {
                 this.triggered(this.loader);
@@ -177,9 +177,29 @@ export default {
         width: 100%;
     }
     .terminal {
+        // min-height: 634px;
         background-color: #151515;
         position: relative;
         display: none;
+        &:before {
+            content: "";
+            height: 28px;
+            width: 100%;
+            background: #CCCCCC;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            background: #999;
+            position: absolute;
+            top: 4px;
+            right: 8px;
+        }
     }
     .terminal-text {
         position: absolute;
@@ -217,6 +237,7 @@ export default {
     @media (min-width: 1024px) {
         .terminal {
             display: block;
+            opacity: 0;
         }
     }
 
