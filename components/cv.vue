@@ -108,7 +108,7 @@ export default {
       font-size: 12px;
       position: absolute;
       top: 40px;
-      left: 40px;
+      left: 20px;
       width: 100%;
       h1 {
         font-size: 3rem;
@@ -249,7 +249,7 @@ export default {
   .cv__aside {
     font-size: 24px;
     height: 100%;
-    padding: 220px 40px 40px 40px;
+    padding: 220px 20px 20px 20px;
     background-color: #eeeeee;
     position: relative;
     p {
@@ -263,6 +263,7 @@ export default {
       transform: translateZ(20px);
       &__title {
         font-size: 16px;
+        left: 40px;
         h1 {
           font-size: 4.18rem;
           margin: 0;
@@ -270,6 +271,9 @@ export default {
         h2 {
           font-size: 2rem;
         }
+      }
+      &__aside {
+        padding: 220px 40px 40px 40px;
       }
       &__body {
         // min-width: 1150px;
