@@ -102,7 +102,8 @@ export default {
       padding: 44px;
       margin-bottom: 100px;
       p {
-        font-size: 28px;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
         margin-top: 0;
         margin-bottom: 44px;
       }
@@ -117,9 +118,10 @@ export default {
       span {
         display: block;
         margin-bottom: 12px;
+        font-size: 1.6rem;
       }
       a {
-        font-size: 24px;
+        font-size: 2.4rem;
         display: block;
         margin-right: 24px;
       }

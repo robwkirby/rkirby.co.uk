@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
   html {
     font-family: 'Lato';
+    font-size: 62.5%;
     * {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;

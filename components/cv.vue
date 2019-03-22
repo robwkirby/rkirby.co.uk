@@ -105,17 +105,14 @@ export default {
     box-shadow: 0px 0px 50px -10px rgba(#000, 0.25);
 
     &__title {
-      font-size: 12px;
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      width: 100%;
+      display: block;
+      margin-bottom: 60px;
       h1 {
-        font-size: 3rem;
+        font-size: 4.4rem;
         margin: 0;
       }
       h2 {
-        font-size: 1.75rem;
+        font-size: 2.05rem;
         margin: 0;
         color: #7a7a7a;
         font-weight: 600;
@@ -125,27 +122,31 @@ export default {
     &__download {
       max-width: 300px;
       position: absolute;
-      top: 45px;
+      top: 60px;
       right: 60px;
     }
 
     &__section {
       margin-bottom: 60px;
-      p {
-        // font-size: 1.5rem;
+      p, a {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
       }
       h2 {
-        font-size: 30px;
-        margin-bottom: 40px;
+        font-size: 3rem;
+        margin-bottom: 4rem;
       }
     }
 
+    &__aside {
+      height: 100%;
+      padding: 20px 20px 20px 20px;
+      background-color: #eeeeee;
+      position: relative;
+    }
+
     &__body {
-      p {
-        font-size: 28px;
-        line-height: 46px;
-      }
-      padding: 220px 40px 220px 40px;
+      padding: 220px 20px 220px 20px;
       .download {
         position: absolute;
         top: 60px;
@@ -156,7 +157,7 @@ export default {
     &__list {
       &-item {
         position: relative;
-        padding: 0px 40px 40px;
+        padding: 0px 20px 40px;
         &:before, &:after {
           content: "";
           display: block;
@@ -192,20 +193,20 @@ export default {
         time {
           font-family: "Gilroy";
           color: $primary;
-          font-size: 26px;
+          font-size: 1.8rem;
           font-weight: 600;
           display: block;
         }
         h2 {
-          font-size: 28px;
+          font-size: 2rem;
           font-family: "Lato";
           font-weight: 400;
           margin: 0 0 40px;
         }
       }
       p {
-        font-size: 24px;
-        line-height: 38px;
+        font-size: 1.8rem;
+        // line-height: 38px;
         color: #696969;
         padding: 0;
         margin: 0;
@@ -215,7 +216,6 @@ export default {
     &__links {
       list-style: none;
       margin: 0;
-      font-size: 18px;
       padding: 0;
       li {
         padding: 5px 0px;
@@ -227,9 +227,10 @@ export default {
         svg {
           position: absolute;
           left: 0;
-          top: 0;
+          top: 50%;
           opacity: 0.5;
           width: 25px;
+          transform: translateY(-50%);
         }
       }
     }
@@ -246,37 +247,38 @@ export default {
 
   }
 
-  .cv__aside {
-    font-size: 24px;
-    height: 100%;
-    padding: 220px 20px 20px 20px;
-    background-color: #eeeeee;
-    position: relative;
-    p {
-      font-size: 24px;
-      line-height: 38px;
-    }
-  }
-
   @media (min-width: 968px) {
     .cv {
       transform: translateZ(20px);
       &__title {
-        font-size: 16px;
-        left: 40px;
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        width: 100%;
+        margin-bottom: 0;
         h1 {
-          font-size: 4.18rem;
+          font-size: 6.7rem;
           margin: 0;
         }
         h2 {
-          font-size: 2rem;
+          font-size: 3.2rem;
+        }
+      }
+      &__section {
+        p, a {
+          font-size: 2.8rem;
+          line-height: 3.8rem;
+          .cv__aside & {
+            font-size: 2.4rem;
+            line-height: 3.4rem;
+          }
         }
       }
       &__aside {
         padding: 220px 40px 40px 40px;
       }
       &__body {
-        // min-width: 1150px;
+        padding: 220px 40px 220px 40px;
       }
       &__list {
         &-item {
@@ -292,13 +294,20 @@ export default {
           time {
             font-family: "Gilroy";
             color: $primary;
-            font-size: 26px;
+            font-size: 2.6rem;
             font-weight: 600;
             display: block;
             position: absolute;
             left: 0;
             top: 0px;
           }
+          h2 {
+            font-size: 2.8rem;
+            
+          }
+        }
+        p {
+          font-size: 2.4rem;
         }
       }
       &__links {
@@ -309,8 +318,12 @@ export default {
   }
   @media (min-width: 1600px) {
     .cv {
+      &__aside {
+        padding: 220px 40px 40px 60px;
+      }
       &__body {
-        min-width: 1000px;
+        min-width: 1100px;
+        padding: 220px 60px 220px 40px;
       }
     }
   }

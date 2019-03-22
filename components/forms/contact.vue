@@ -135,6 +135,7 @@ export default {
             }
         }
         &__label {
+            font-size: 1.6rem;
             font-family: "Gilroy";
             font-weight: bold;
             margin-bottom: 10px;

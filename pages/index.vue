@@ -112,7 +112,8 @@ export default {
     margin: 60px 0 0;
   }
   &__text {
-    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 3.8rem;
     margin: 40px 0px 50px;
   }
   &__logo {
@@ -142,7 +143,8 @@ export default {
       margin-top: 30px;
     }
     &__text {
-      font-size: 32px;
+      font-size: 3.2rem;
+      line-height: 4.5rem;
     }
   }
 }

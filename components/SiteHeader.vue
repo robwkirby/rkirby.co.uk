@@ -16,21 +16,14 @@
                 Menu
             </template>
         </button>
-        <ul class="site-header__nav" :class="mobileMenuOpen ? 'site-header__nav--active' : ''">
-            <li>
-                <nuxt-link @click.native="setActive" to="/" data-name="index">Home</nuxt-link>
-            </li>
-            <!-- <li>
-                <nuxt-link @click.native="setActive" to="/work" data-name="work">Work</nuxt-link>
-            </li> -->
-            <li>
-                <nuxt-link @click.native="setActive" to="/about" data-name="about">CV</nuxt-link>
-            </li>
-            <li>
-                <nuxt-link @click.native="setActive" to="/contact" data-name="contact">Contact</nuxt-link>
+
+        <ul class="site-header__nav" :class="mobileMenuOpen ? 'site-header__nav--active' : ''" >
+            <li v-for="item in navLinks" :key="item">
+                <nuxt-link @click.native="setActive" :to="item.link" :data-name="item.dataName">{{ item.linkText }}</nuxt-link>
             </li>
             <li class="slider"></li>
         </ul>
+
     </header>
 </template>
 
@@ -41,6 +34,28 @@ export default {
     data() {
         return {
             mobileMenuOpen: false,
+            navLinks: [
+                {
+                    link: "/",
+                    linkText: "Home",
+                    dataName: "index",
+                },
+                // {
+                //     link: "/work",
+                //     linkText: "Work",
+                //     dataName: "work",
+                // },
+                {
+                    link: "/about",
+                    linkText: "CV",
+                    dataName: "about",
+                },
+                {
+                    link: "/contact",
+                    linkText: "Contact",
+                    dataName: "contact",
+                },
+            ]
         }
     },
     methods: {
