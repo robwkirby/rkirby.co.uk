@@ -119,12 +119,7 @@ export default {
       }
     }
 
-    &__download {
-      max-width: 300px;
-      position: absolute;
-      top: 60px;
-      right: 60px;
-    }
+
 
     &__section {
       margin-bottom: 60px;
@@ -146,12 +141,16 @@ export default {
     }
 
     &__body {
-      padding: 220px 20px 220px 20px;
+      padding: 20px 20px 100px 20px;
       .download {
         position: absolute;
         top: 60px;
         right: 60px;
       }
+    }
+
+    &__download {
+      display: none;
     }
 
     &__list {
@@ -196,9 +195,11 @@ export default {
           font-size: 1.8rem;
           font-weight: 600;
           display: block;
+          margin-bottom: 8px;
         }
         h2 {
           font-size: 2rem;
+          line-height: 2.8rem;
           font-family: "Lato";
           font-weight: 400;
           margin: 0 0 40px;
@@ -280,6 +281,13 @@ export default {
       &__body {
         padding: 220px 40px 220px 40px;
       }
+      &__download {
+        display: block;
+        max-width: 300px;
+        position: absolute;
+        top: 60px;
+        right: 60px;
+      }
       &__list {
         &-item {
           padding: 0px 80px 40px 250px;
@@ -300,6 +308,7 @@ export default {
             position: absolute;
             left: 0;
             top: 0px;
+            margin-bottom: 0;
           }
           h2 {
             font-size: 2.8rem;
