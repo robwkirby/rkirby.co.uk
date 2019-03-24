@@ -4,10 +4,9 @@
             <div class="row align-items-center">
                 <div class="col-12">
                     <header class="error-msg__header">
-                        <!-- <img src="https://media1.tenor.com/images/5ad970b8c779e78a19c4ac7c86f20b78/tenor.gif?itemid=10834164" alt=""> -->
                         <Heading class="error-msg__title">There’s nothing here...</Heading>
                     </header>
-                    <p>The page you're looking for doesn't exist. Maybe it’s been moved, or maybe it never existed at all 🤔</p>
+                    <p>The page you're looking for doesn't exist. Maybe it's been moved, or maybe it never existed at all. 🤔</p>
                     <a href="/" class="btn">Go Home</a>
                 </div>
             </div>
