@@ -44,7 +44,7 @@
         </div>
         <div class="col-12 col-lg-8 col-xxl">
           <div class="cv__body">
-            <a href="/uploads/rkirby-cv.pdf" class="cv__download cv__download--lg btn btn--outline">
+            <a :href="cvPath" class="cv__download btn btn--outline">
               Download
             </a>
             <section class="cv__section" v-if="tools">
@@ -82,18 +82,21 @@
           </div>
         </div>
       </div>
-    </section>
-    <div>
-      <a href="/uploads/rkirby-cv.pdf" class="cv__download btn btn--outline">
-        Download
+      <a :href="cvPath" class="cv__download-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M16 11h5l-9 10-9-10h5V0h8v11zm3 8v3H5v-3H3v5h18v-5h-2z"/></svg>    
       </a>
-    </div>
+  </section>
   </div>
 </template>
 
 <script>
 
 export default {
+  data() {
+    return {
+      cvPath: "/uploads/rkirby-cv.pdf"
+    }
+  },
   props: [
     "about",
     "links",
@@ -157,8 +160,23 @@ export default {
     }
 
     &__download {
-      &--lg {
-        display: none;
+      display: none;
+    }
+
+    &__download-sm {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      background: $primary;
+      border-radius: 100%;
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+      svg {
+        fill: #fff;
       }
     }
 
@@ -296,6 +314,9 @@ export default {
         position: absolute;
         top: 60px;
         right: 60px;
+      }
+      &__download-sm {
+        display: none;
       }
       &__list {
         &-item {
