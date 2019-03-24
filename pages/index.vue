@@ -92,7 +92,7 @@ export default {
 
 .intro {
   > .row {
-    min-height: 90vh;
+    min-height: 85vh;
   }
   &__col {
     @include make-col-ready();

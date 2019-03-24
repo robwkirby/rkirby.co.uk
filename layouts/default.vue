@@ -91,7 +91,7 @@ export default {
       width: 120%; 
       z-index: 0;
       opacity: 0.05;
-      background: #000;
+      background-color: #000;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
       // animation-name: logoSlide;
       // animation-duration: 12s;
