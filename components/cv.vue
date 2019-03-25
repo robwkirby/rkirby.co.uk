@@ -7,12 +7,12 @@
 
             <div class="cv__title">
               <h1>Rob Kirby</h1>
-              <h2>Front end Developer</h2>
+              <h2>Front End Developer</h2>
             </div>
 
             <section class="cv__section">
               <h2>About</h2>
-              <p>I'm a front end developer with 6 years commercial experience working with high profile digital agencies in the North West.</p>
+              <p>I'm a front end developer with six years commercial experience, working with high profile digital agencies in the North West.</p>
               <p>I'm interested in modular and performant front end development, and crafting engaging user experiences.</p>
             </section>
 
@@ -47,14 +47,23 @@
             <a :href="cvPath" class="cv__download btn btn--outline">
               Download
             </a>
-            <section class="cv__section" v-if="tools">
-              <h2>Tools</h2>
-              <p>{{tools.join(", ")}}</p>
-            </section>
 
             <section class="cv__section" v-if="skills">
               <h2>Skills</h2>
-              <p>{{skills.join(", ")}}</p>
+              <p>
+                <template v-for="(item, index) in skills">
+                  {{ item.skill }}<span v-if="item.subSkill" :key="item"> ({{item.subSkill.join(", ")}})</span>{{skills.length - 1 == index ? "" : ","}}
+                </template>
+              </p>
+            </section>
+
+            <section class="cv__section" v-if="tools">
+              <h2>Tools</h2>
+              <p>
+                <template v-for="(item, index) in tools">
+                  {{ item.skill }}<span v-if="item.subSkill" :key="item"> ({{item.subSkill.join(", ")}})</span>{{tools.length - 1 == index ? "" : ","}}
+                </template>
+              </p>
             </section>
 
             <section class="cv__section cv__section--work" v-if="links">
@@ -136,6 +145,9 @@ export default {
       p, a {
         font-size: 1.8rem;
         line-height: 2.8rem;
+        span {
+          color:#696969;
+        }
       }
       h2 {
         font-size: 3rem;
