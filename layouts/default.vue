@@ -38,6 +38,16 @@ export default {
       return `site-container--${this.$route.name} 
               site-container--${this.$store.state.colourScheme}`
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      anime({
+        targets: '.site-page',
+        opacity: 1,
+        delay: 1000,
+        duration: 1500,
+      });
+    });
   }
 }
 </script>
@@ -93,9 +103,6 @@ export default {
       opacity: 0.05;
       background-color: #000;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-      // animation-name: logoSlide;
-      // animation-duration: 12s;
-      // animation-iteration-count: infinite;
     }
 
     &--about {
@@ -115,26 +122,16 @@ export default {
     }
   }
 
-    @keyframes logoSlide {
-    0% {
-      transform: translateX(0%);
-    }
-
-    50% {
-      transform: translateX(-25%);
-    }
-
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
   .site-page {
     position: absolute;
     width: 100%;
+    opacity: 0;
     z-index: 1;
     &__title {
       padding-top: 20px;
+    }
+    &.active {
+      opacity: 1;
     }
   }
 
