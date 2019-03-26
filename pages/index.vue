@@ -48,7 +48,7 @@ export default {
     enter (el, done) {
 
       anime.set(el, {
-        translateX: "-100%",
+        translateX: "-120%",
       });
       
       var tl = anime.timeline({

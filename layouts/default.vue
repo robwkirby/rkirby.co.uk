@@ -44,8 +44,9 @@ export default {
       anime({
         targets: '.site-page',
         opacity: 1,
-        delay: 1000,
-        duration: 1500,
+        delay: 300,
+        duration: 1000,
+        easing: 'easeOutExpo'
       });
     });
   }
