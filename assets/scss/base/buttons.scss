@@ -17,7 +17,7 @@
     &--outline {
         position: relative;
         background-color: transparent;
-        box-shadow: inset 0px 0px 0px 3px #212121;
+        box-shadow: inset 0px 0px 0px 3.5px #212121;
         color: #212121;
         z-index: 1;
         overflow: hidden;
@@ -25,7 +25,7 @@
         &:hover, &:focus {
             color: #FFF;
             background-color: transparent;
-            box-shadow: inset 0px 0px 0px 3px darken($primary, 10%);
+            box-shadow: inset 0px 0px 0px 3.5px darken($primary, 10%);
             &:before {
                 transform: skew(0deg) translate3d(0, 0, 0);
             }

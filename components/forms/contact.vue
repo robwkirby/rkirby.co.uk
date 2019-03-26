@@ -158,6 +158,7 @@ export default {
         }
 
         &__error {
+            font-size: 1.6rem;
             display: none;
             font-weight: bold;
             color: red;
