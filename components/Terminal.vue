@@ -177,6 +177,7 @@ export default {
         width: 100%;
     }
     .terminal {
+        // min-height: 85vh;
         min-height: 634px;
         background-color: #151515;
         position: relative;
@@ -187,7 +188,7 @@ export default {
             width: 100%;
             background: #CCCCCC;
             position: absolute;
-            bottom: 100%;
+            top: 0;
             left: 0;
         }
         &:after {
@@ -197,7 +198,7 @@ export default {
             border-radius: 100%;
             background: #999;
             position: absolute;
-            bottom: calc(100% + 3px);
+            top: 4px;
             right: 8px;
         }
         &__loader {
@@ -205,7 +206,7 @@ export default {
             font-family: "consolas";
             color: #fff;
             font-size: 1.4rem;
-            top: 10px;
+            top: 40px;
             left: 5px;
             text-align: left;
             width: 100%;
