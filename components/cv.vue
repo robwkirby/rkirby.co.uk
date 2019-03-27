@@ -293,15 +293,15 @@ export default {
       &__title {
         position: absolute;
         top: 60px;
-        left: 60px;
+        left: 40px;
         width: 100%;
         margin-bottom: 0;
         h1 {
-          font-size: 6.7rem;
+          font-size: 4.7rem;
           margin: 0;
         }
         h2 {
-          font-size: 3.2rem;
+          font-size: 2.2rem;
         }
       }
       &__section {
@@ -369,6 +369,17 @@ export default {
   }
   @media (min-width: 1600px) {
     .cv {
+      &__title {
+        top: 60px;
+        left: 60px;
+        h1 {
+          font-size: 6.7rem;
+          margin: 0;
+        }
+        h2 {
+          font-size: 3.2rem;
+        }
+      }
       &__aside {
         padding: 220px 40px 40px 60px;
       }
