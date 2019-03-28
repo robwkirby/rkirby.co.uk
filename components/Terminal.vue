@@ -178,10 +178,15 @@ export default {
     }
     .terminal {
         // min-height: 85vh;
-        min-height: 634px;
+        padding-top: 82.4%;
         background-color: #151515;
         position: relative;
         display: none;
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         &:before {
             content: "";
             height: 28px;
@@ -190,6 +195,7 @@ export default {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 9;
         }
         &:after {
             content: "";
