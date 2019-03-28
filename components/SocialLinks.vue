@@ -32,13 +32,14 @@ export default {
       return `social-list--${this.$store.state.colourScheme}`
     }
   },
+  beforeMount() {
+    anime.set('.social-list__item', {
+      translateY: 150,
+    });
+  },
   mounted() {
-    this.$nextTick(() => {
-      anime.set('.social-list__item', {
-        translateY: 150,
-        opacity: 0,
-      });
 
+    this.$nextTick(() => {
       anime({
         targets: '.social-list__item',
         opacity: 1,
@@ -62,8 +63,10 @@ export default {
     margin: 0;
     z-index: 9;
     &__item {
+      opacity: 0;
       display: block;
       margin-bottom: 20px;
+      transform: translateY(150px);
       &-icon {
         width: 26px;
         max-width: 26px;

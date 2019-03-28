@@ -1,6 +1,15 @@
 <template>
     <section class="terminal" ref="terminal">
-        <!-- <h1 style="color: #FFF">{{loaded}}</h1> -->
+        
+        <div class="terminal__loader">
+            <span>rkirby.co.uk / Fake Terminal [Version 1.0.0]</span>
+            <br>
+            <span>Initialising...</span><br>
+            <span>({{loaded}}%)</span>
+            <div class="terminal__loader-bar">
+                <div :style='`width:${loaded}%;`'></div>
+            </div>
+        </div>
         <!-- <input class="terminal-text" type="text" placeholder="commands"> -->
     </section>
 </template>
@@ -40,10 +49,6 @@ export default {
 
             this.$refs.terminal.appendChild(this.app.view);
 
-            anime.set('.terminal', {
-                translateY: 100,
-                opacity: 0,
-            });
 
             this.loader = new PIXI.loaders.Loader();
             this.loader.add('sprite/sprite.json');
@@ -70,13 +75,8 @@ export default {
 
             // listen to the complete event, it will be fired when everything is loaded
             this.loader.on('complete', (loader,res) => {
-                anime({
-                    targets: '.terminal',
-                    translateY: 0, // -> '540deg'
-                    opacity: 1, // -> '250px'
-                    easing: 'spring(1, 80, 10, 0)',
-                    delay: 600,
-                    duration: 3000,
+                anime.set('.terminal__loader', {
+                    opacity: 0,
                 });
             });
 
@@ -153,9 +153,9 @@ export default {
     },
     beforeDestroy() { 
 
-        anime.set('.terminal', {
-            display: 'none'
-        });
+        // anime.set('.terminal', {
+        //     display: 'none'
+        // });
 
         // destroy pixi
         Object.keys(PIXI.utils.TextureCache).forEach(function(texture) {  
@@ -177,10 +177,16 @@ export default {
         width: 100%;
     }
     .terminal {
-        // min-height: 634px;
+        // min-height: 85vh;
+        padding-top: 82.4%;
         background-color: #151515;
         position: relative;
         display: none;
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
         &:before {
             content: "";
             height: 28px;
@@ -189,6 +195,7 @@ export default {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 9;
         }
         &:after {
             content: "";
@@ -200,7 +207,35 @@ export default {
             top: 4px;
             right: 8px;
         }
+        &__loader {
+            position: absolute;
+            font-family: "consolas";
+            color: #fff;
+            font-size: 1.4rem;
+            top: 40px;
+            left: 5px;
+            text-align: left;
+            width: 100%;
+            span {
+                display: block;
+                &:first-child {
+                    color: #1ec951;
+                }
+            }
+            &-bar {
+                background: #eee;
+                max-width: 250px;
+                height: 20px;
+                div {
+                    height: 20px;
+                    background: #1ec951;
+                    width: 0;
+                }
+            }
+        }
+
     }
+
     .terminal-text {
         position: absolute;
         top: 100%;
@@ -237,7 +272,6 @@ export default {
     @media (min-width: 1024px) {
         .terminal {
             display: block;
-            opacity: 0;
         }
     }
 

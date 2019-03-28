@@ -7,12 +7,12 @@
 
             <div class="cv__title">
               <h1>Rob Kirby</h1>
-              <h2>Front end Developer</h2>
+              <h2>Front End Developer</h2>
             </div>
 
             <section class="cv__section">
               <h2>About</h2>
-              <p>I'm a front end developer with 6 years commercial experience working with high profile digital agencies in the North West.</p>
+              <p>I'm a front end developer with six years commercial experience, working with high profile digital agencies in the North West.</p>
               <p>I'm interested in modular and performant front end development, and crafting engaging user experiences.</p>
             </section>
 
@@ -44,17 +44,26 @@
         </div>
         <div class="col-12 col-lg-8 col-xxl">
           <div class="cv__body">
-            <a href="/uploads/rkirby-cv.pdf" class="cv__download cv__download--lg btn btn--outline">
+            <a :href="cvPath" class="cv__download btn btn--outline">
               Download
             </a>
-            <section class="cv__section" v-if="tools">
-              <h2>Tools</h2>
-              <p>{{tools.join(", ")}}</p>
-            </section>
 
             <section class="cv__section" v-if="skills">
               <h2>Skills</h2>
-              <p>{{skills.join(", ")}}</p>
+              <p>
+                <template v-for="(item, index) in skills">
+                  {{ item.skill }}<span v-if="item.subSkill" :key="item"> ({{item.subSkill.join(", ")}})</span>{{skills.length - 1 == index ? "" : ","}}
+                </template>
+              </p>
+            </section>
+
+            <section class="cv__section" v-if="tools">
+              <h2>Tools</h2>
+              <p>
+                <template v-for="(item, index) in tools">
+                  {{ item.skill }}<span v-if="item.subSkill" :key="item"> ({{item.subSkill.join(", ")}})</span>{{tools.length - 1 == index ? "" : ","}}
+                </template>
+              </p>
             </section>
 
             <section class="cv__section cv__section--work" v-if="links">
@@ -82,18 +91,21 @@
           </div>
         </div>
       </div>
-    </section>
-    <div>
-      <a href="/uploads/rkirby-cv.pdf" class="cv__download btn btn--outline">
-        Download
+      <a :href="cvPath" class="cv__download-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M16 11h5l-9 10-9-10h5V0h8v11zm3 8v3H5v-3H3v5h18v-5h-2z"/></svg>    
       </a>
-    </div>
+  </section>
   </div>
 </template>
 
 <script>
 
 export default {
+  data() {
+    return {
+      cvPath: "/uploads/rkirby-cv.pdf"
+    }
+  },
   props: [
     "about",
     "links",
@@ -133,6 +145,9 @@ export default {
       p, a {
         font-size: 1.8rem;
         line-height: 2.8rem;
+        span {
+          color:#696969;
+        }
       }
       h2 {
         font-size: 3rem;
@@ -157,8 +172,23 @@ export default {
     }
 
     &__download {
-      &--lg {
-        display: none;
+      display: none;
+    }
+
+    &__download-sm {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      background: $primary;
+      border-radius: 100%;
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+      svg {
+        fill: #fff;
       }
     }
 
@@ -263,15 +293,15 @@ export default {
       &__title {
         position: absolute;
         top: 60px;
-        left: 60px;
+        left: 40px;
         width: 100%;
         margin-bottom: 0;
         h1 {
-          font-size: 6.7rem;
+          font-size: 4.7rem;
           margin: 0;
         }
         h2 {
-          font-size: 3.2rem;
+          font-size: 2.2rem;
         }
       }
       &__section {
@@ -296,6 +326,9 @@ export default {
         position: absolute;
         top: 60px;
         right: 60px;
+      }
+      &__download-sm {
+        display: none;
       }
       &__list {
         &-item {
@@ -336,6 +369,17 @@ export default {
   }
   @media (min-width: 1600px) {
     .cv {
+      &__title {
+        top: 60px;
+        left: 60px;
+        h1 {
+          font-size: 6.7rem;
+          margin: 0;
+        }
+        h2 {
+          font-size: 3.2rem;
+        }
+      }
       &__aside {
         padding: 220px 40px 40px 60px;
       }

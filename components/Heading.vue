@@ -29,6 +29,11 @@ export default {
         font-size: 62px;
         line-height: 1;
     }
+    @media (min-width: 1400px) {
+        .heading {
+            font-size: 88px;
+        }
+    }
     @media (min-width: 1600px) {
         .heading {
             font-size: 98px;
