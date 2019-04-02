@@ -38,7 +38,7 @@
             <button class="btn contact-form__submit js-contact-btn" v-show="!formSubmitted">
                 <span>Send</span>
             </button>
-            <span v-show="formSubmitted">Thanks for your message!</span>
+            <span v-show="formSubmitted" class="contact-form__success">Thanks for your message!</span>
             <svg class="spinner" :class='{"active" : formSubmitting}' width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <circle class="path" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
             </svg>
@@ -155,6 +155,9 @@ export default {
             .contact-form__field--error & {
                 box-shadow: inset 0px 0px 0px 2px red;
             }
+        }
+        &__success {
+            font-size: 1.8rem;
         }
 
         &__error {
