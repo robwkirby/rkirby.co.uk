@@ -8,21 +8,21 @@ module.exports = {
     latestWork
   },
   head: {
-    title: 'Rob Kirby | Frontend Developer',
+    title: 'Rob Kirby | Front End Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Portfolio of Rob Kirby, Front End Developer based in Lancaster, England.' },
       { name: 'theme-color', content: '#c92b1e' },
       // Open Graph
-      { name: 'og:title', content: 'Rob Kirby | Frontend Developer' },
+      { name: 'og:title', content: 'Rob Kirby | Front End Developer' },
       { name: 'og:description', content: 'Portfolio of Rob Kirby, Front End Developer based in Lancaster, England.' },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://www.rkirby.co.uk/' },
       { name: 'og:image', content: '/uploads/meta.png' },
       // Twitter Card
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:title', content: 'Rob Kirby | Frontend Developer' },
+      { name: 'twitter:title', content: 'Rob Kirby | Front End Developer' },
       { name: 'twitter:description', content: 'Portfolio of Rob Kirby, Front End Developer based in Lancaster, England.' },
       { name: 'twitter:image', content: '/uploads/meta.png' },
       { name: 'twitter:image:alt', content: 'https://www.rkirby.co.uk/' }
