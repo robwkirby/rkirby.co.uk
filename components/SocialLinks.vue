@@ -40,12 +40,19 @@ export default {
   mounted() {
 
     this.$nextTick(() => {
+      // anime({
+      //   targets: '.social-list__item',
+      //   opacity: 1,
+      //   translateY: 0,
+      //   delay: anime.stagger(-200, {start: 1000, easing: 'easeOut'}),
+      //   duration: 1500,
+      // });
       anime({
         targets: '.social-list__item',
         opacity: 1,
         translateY: 0,
-        delay: anime.stagger(-200, {start: 1000, easing: 'easeOut'}),
-        duration: 1500,
+        delay: anime.stagger(200, {easing: 'easeOut'}),
+        duration: 1500
       });
     });
   }
