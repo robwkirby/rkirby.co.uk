@@ -5,7 +5,7 @@
         <div class="intro__col">
           <Heading class="intro__title">Rob Kirby</Heading>
           <p class="intro__text">
-            Hi, I'm a Front End Developer with six years commercial experience. I'm based in Lancaster, England, and currently work at <a href="https://www.soapmedia.co.uk/">Soap Media</a>.
+            Hi, I'm a Front End Developer with six years commercial experience. I'm based in Lancaster, England, and currently work at <a href="https://factored.studio/">Factored</a>.
           </p>
           <div class="row">
             <div class="col btn-col">
