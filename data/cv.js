@@ -27,8 +27,15 @@ const cvdata = {
     ],
     "workExperience": [
         {
-            "start": "2015",
+            "start": "2019",
             "end": "Now",
+            "title": "Frontend Web Developer",
+            "company": "Factored",
+            "description": ""
+        },
+        {
+            "start": "2015",
+            "end": "2019",
             "title": "Senior Front End Developer",
             "company": "Soap Media",
             "description": "Front end development on PHP based sites (Wordpress & Symfony). Responsibilities include mentoring junior staff, creating and maintaining a reusable front end workflow for the dev team, and informing the hiring process."
